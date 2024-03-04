@@ -8,7 +8,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { name, email, password } = credentials;
-        const response = await fetch("https://notebook-app-backend.vercel.app/api/auth/createuser", {
+        const response = await fetch("https://notebook-app-backend.vercel.app/createuser", {
             mode:'no-cors',
             method: 'POST',
             headers: {

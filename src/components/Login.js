@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://notebook-app-backend.vercel.app/api/auth/login", {
+        const response = await fetch("https://notebook-app-backend.vercel.app/login", {
             mode: 'no-cors',
             method: 'POST',
             headers: {
