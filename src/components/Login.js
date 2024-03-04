@@ -8,14 +8,15 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://notebook-app-backend.vercel.app/api/auth/login", {
+            mode: 'no-cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ email: credentials.email, password: credentials.password })
         });
-        const json = await response.json()
+        const json = await response.json();
         console.log(json);
         if (json.success) {
             // Save the auth token and redirect
